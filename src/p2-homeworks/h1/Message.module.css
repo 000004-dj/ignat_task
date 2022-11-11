@@ -1,0 +1,77 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.message {
+    max-width: 500px;
+    color: white;
+    min-width: 200px;
+    flex-direction: column;
+    margin-left: 20px;
+    float: left;
+    background: #082103;
+    border-radius: 1em;
+    position: relative;
+    line-height: 1.5em;
+    max-height: 100px;
+    padding: .2em .5em;
+}
+
+.messageText {
+
+}
+
+.avatar {
+    flex-direction: column;
+    z-index: 5;
+    margin-top: -.8em;
+}
+
+.avatar img {
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+
+.userName {
+    color: #827FAA;
+}
+
+.time {
+    text-align: right;
+    display: block;
+    color: rgba(250, 250, 250, 0.5);
+}
+
+
+/*настройки хвостика*/
+
+.message {
+
+}
+
+.message::after, .message::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: .2em;
+    width: 1.8em;
+    height: 1.8em;
+    border: .5em solid #B5E51D;
+    border-radius: 50%;
+    background: #B5E51D;
+}
+
+.message::before {
+    border-top: none;
+    height: .9em;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    background: #082103;
+    border-color: #082103;
+    margin-right: -.9em;
+
+}
+
