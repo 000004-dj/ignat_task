@@ -1,14 +1,14 @@
 import React from 'react'
 import classes from './Message.module.css'
 
-type messageDataType = {
-    avatar: any,
+type messagePropsType = {
+    avatar: string,
     name: string,
     message: string,
     time: string,
 }
 
-function Message(props: messageDataType) {
+function Message(props: messagePropsType) {
     return (
 
         <div className={classes.header}>
@@ -21,7 +21,7 @@ function Message(props: messageDataType) {
                 <div className={classes.userName}>
                     <span>{props.name}</span>
                 </div>
-                
+
                 <div className={classes.messageText}>
                     <span>{props.message}</span>
                     <span className={classes.time}>{props.time}</span>
